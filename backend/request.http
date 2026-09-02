@@ -1,0 +1,60 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "123456"
+}
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "123456"
+}
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@careconnect.com",
+  "password": "Admin123"
+}
+###
+GET http://localhost:5000/api/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTdlYjhiZDU5ZjYxYmMzOTU2NDdjZSIsImlhdCI6MTc4ODM0MTcyNiwiZXhwIjoxNzg4OTQ2NTI2fQ.GPeR__jsYAx8KCxaFOM9f9J9-N3Xu7F2c8btCwGNdQU
+###
+GET http://localhost:5000/api/auth/admin-test
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTdlYjhiZDU5ZjYxYmMzOTU2NDdjZSIsImlhdCI6MTc4ODM0MTcyNiwiZXhwIjoxNzg4OTQ2NTI2fQ.GPeR__jsYAx8KCxaFOM9f9J9-N3Xu7F2c8btCwGNdQU
+
+###
+GET http://localhost:5000/api/categories
+###
+###
+POST http://localhost:5000/api/categories
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTdlZjY5MmVkZDY2YmNmMTYyNWU1MyIsImlhdCI6MTc4ODM0MjI1OSwiZXhwIjoxNzg4OTQ3MDU5fQ.-Bw5H2tKcUip17q4cnbs12mGY7pzs9BHWbCClMe-SXU
+
+{
+  "name": "Plumbing",
+  "description": "Pipe repair, leakage fixing and plumbing services"
+}
+
+###
+###
+GET http://localhost:5000/api/categories
+###
+
+
+
+PUT http://localhost:5000/api/categories/6a97f04760e5cc603f798771
+Content-Type: application/json
+Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTdlZjY5MmVkZDY2YmNmMTYyNWU1MyIsImlhdCI6MTc4ODM0MjQ5NiwiZXhwIjoxNzg4OTQ3Mjk2fQ.B45158YKKZ7bhRbqTei_6yM--Qw0cAAaNfyazKylSCE
+
+{
+  "name": "Plumbing Services",
+  "description": "Pipe repair, leakage fixing, installation and plumbing maintenance"
+}
